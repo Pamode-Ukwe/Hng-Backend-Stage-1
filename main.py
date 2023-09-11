@@ -4,7 +4,7 @@ import pytz
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/api")
 def home(slack_name:str = "Pamode", track:str = "backend"):
     now = datetime.now(pytz.UTC)
     utc_time = now.strftime("%Y-%m-%dT%H:%M:%SZ")
